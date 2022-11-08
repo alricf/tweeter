@@ -1,0 +1,21 @@
+nav {
+  height: 120px;
+  background: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  align-items: center;
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 45px;
+}
+
+.fa-angles-down {
+  display: block !important;
+  text-align: center;
+  color: red;
+}

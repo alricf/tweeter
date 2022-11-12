@@ -1,9 +1,9 @@
-section.tweet {
+section.tweets-container {
   width: 100%;
   margin-top: 1em;
   border: 3px solid black;
 }
-section.tweet:hover {
+section.tweets-container:hover {
   box-shadow: 5px 5px rgb(199, 199, 199);
 }
 
@@ -24,6 +24,11 @@ article.tweet header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+article.tweet header p.avatar-name {
+  display: flex;
   align-items: center;
 }
 

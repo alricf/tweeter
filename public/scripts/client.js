@@ -71,7 +71,7 @@ $(document).ready(function() {
   $(".container form").submit(function (event) {
     event.preventDefault();
     const formData = $(this).serialize();
-    console.log(formData);
+    
     $.ajax({
       type: "POST",
       url: "/tweets",

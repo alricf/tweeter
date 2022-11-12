@@ -67,4 +67,9 @@ $(document).ready(function() {
     return $tweet;
   };
   renderTweets(data);
+
+  $(".container form").submit(function (event) {
+    event.preventDefault();
+  });
+
 });

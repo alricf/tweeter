@@ -10,6 +10,12 @@ form {
   align-items: center;
 }
 
+section.new-tweet form h4 {
+  width: 100%;
+  display: flex;
+  margin: 0px;
+}
+
 .button-count {
   width: 100%;
   display: flex;
@@ -32,8 +38,6 @@ textarea#tweet-text {
 
 ::placeholder { 
   color: #545149;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 button {
@@ -45,4 +49,3 @@ button {
 .counter {
 font-family: 'Bungee', sans-serif;
 }
-

@@ -1,9 +1,8 @@
 section.tweets-container {
   width: 100%;
   margin-top: 1em;
-  border: 3px solid black;
 }
-section.tweets-container:hover {
+article.tweet:hover {
   box-shadow: 5px 5px rgb(199, 199, 199);
 }
 
@@ -14,6 +13,8 @@ article.tweet {
   justify-content: center;
   align-items: center;
   padding: 0px 10px;
+  border: 3px solid black;
+  margin: 30px 0px;
 }
 
 article.tweet p {
@@ -29,13 +30,6 @@ article.tweet header {
 
 article.tweet header p.avatar-name {
   display: flex;
-  align-items: center;
-}
-
-article.tweet section {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
@@ -71,4 +65,10 @@ article.tweet i.fa-solid.fa-retweet:hover {
 
 article.tweet i.fa-solid.fa-heart:hover {
   color: orange;
+}
+
+article.tweet section.tweet-body {
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }

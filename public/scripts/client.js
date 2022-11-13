@@ -26,8 +26,8 @@ $(document).ready(function() {
         &nbsp;&nbsp;${tweetData.user.name}</p>
         <p>${tweetData.user.handle}</p>
       </header>
-      <section>
-        <p>${tweetData.content.text}</p>
+      <section class="tweet-body">
+        <p><strong>${tweetData.content.text}</strong></p>
       </section>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>
@@ -60,6 +60,10 @@ $(document).ready(function() {
       type: "POST",
       url: "/tweets",
       data: formData,
+    }).then(function() {
+      $("textarea#tweet-text").val("");
+      $(".counter").val(140);
+      loadTweets();
     });
   });
 

@@ -5,8 +5,28 @@
  */
 
 $(document).ready(function() {
+  // Helper Functions
+
+  // Validation function for tweet input
+  const validation = function(text) {
+    if (!text) {
+      return {
+        message: 'Tweet cannot be empty!',
+        notSuccess: true,
+      };
+    }
+
+    if (text.length > 140) {
+      return {
+        message: 'Maximum characters for tweet exceeded - 140 characters max allowed!',
+        notSuccess: true,
+      };
+    }
+    return { message: "", notSuccess: false, };
+  };
+
   // Function to protect against cross-site scripting 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -52,13 +72,17 @@ $(document).ready(function() {
   // Posting Tweets
   $(".container form").submit(function(event) {
     event.preventDefault();
-    // Validation checks
+    $("div.error").slideUp();
+
+    // Validation check
     const tweetText = $("textarea#tweet-text").val();
-    if (!tweetText) {
-      return alert("Error: Tweet text empty");
-    };
-    if (tweetText.length > 140) {
-      return alert("Error: Maximum characters for tweet exceeded - 140 characters max allowed");
+    const validate = validation(tweetText);
+    if (validate.notSuccess) {
+      // return alert("Error: Tweet text empty");
+      $("div.error").slideDown("slow", function() {
+        $(this).html(`&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;Error: ${validate.message}&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>`);
+      });
+      return;
     };
 
     const formData = $(this).serialize();

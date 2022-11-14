@@ -49,3 +49,11 @@ button {
 .counter {
 font-family: 'Bungee', sans-serif;
 }
+
+div.error {
+  border: 3px solid red;
+  color: red;
+}
+div.error:empty{
+  display: none;
+}

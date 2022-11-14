@@ -5,6 +5,7 @@
  */
 
 $(document).ready(function() {
+  // Function to protect against cross-site scripting 
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));

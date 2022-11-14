@@ -5,6 +5,12 @@
  */
 
 $(document).ready(function() {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Creating and Rendering Tweets Code
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -27,7 +33,7 @@ $(document).ready(function() {
         <p>${tweetData.user.handle}</p>
       </header>
       <section class="tweet-body">
-        <p><strong>${tweetData.content.text}</strong></p>
+        <p><strong>${escape(tweetData.content.text)}</strong></p>
       </section>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>

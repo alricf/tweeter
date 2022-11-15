@@ -1,0 +1,20 @@
+/* @media only screen and (min-width: 768px) and (max-width: 1023px)
+{
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header.header-top {
+    width: 50%;
+  } 
+
+  section.new-tweet {
+   height: 500px;
+  }
+
+  section.tweets-container {
+    
+    flex-wrap: wrap;
+  }  
+} */

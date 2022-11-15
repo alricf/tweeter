@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1024px) 
+{
+  body {
+    display: flex;
+  }
+
+  header.header-top {
+    height: 443px;
+    width: 201%;
+    margin-left: 40px;
+    margin-right: 115px;
+    margin-top: 166px;
+  }
+
+  main.container {
+    width: 258%;
+    margin-right: 25px;
+    margin-top: 125px;
+  }
+
+}

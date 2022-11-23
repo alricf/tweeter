@@ -1,20 +1,33 @@
-/* @media only screen and (min-width: 768px) and (max-width: 1023px)
+@media only screen and (min-width: 768px) and (max-width: 1023px)
 {
-  body {
-    display: flex;
-    flex-wrap: wrap;
+  
+  main.container {
+    flex-direction: row;
+    align-items: flex-start;    
   }
 
-  header.header-top {
-    width: 50%;
-  } 
-
   section.new-tweet {
-   height: 500px;
+    width: 50vw;
+    margin-right: 13px;
+    font-size: 20px;
   }
 
   section.tweets-container {
-    
-    flex-wrap: wrap;
-  }  
-} */
+    width: 50vw;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  article.tweet {
+    background: rgb(0, 255, 247);
+  }
+
+  div.error {
+    font-size: 15px;
+  }
+
+  article.tweet:hover {
+    box-shadow: 5px 5px rgb(255, 123, 0);
+  }
+ 
+}

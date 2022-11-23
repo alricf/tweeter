@@ -14,8 +14,12 @@
 
   main.container {
     width: 258%;
-    margin-right: 25px;
+    margin-right: 40px;
     margin-top: 125px;
+  }
+
+  section.tweets-container {
+    width: 50vw;
   }
 
 }

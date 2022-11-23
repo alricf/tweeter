@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     if (text.length > 140) {
       return {
-        message: 'Maximum characters for tweet exceeded - 140 characters max allowed!',
+        message: '140 characters max allowed!',
         notSuccess: true,
       };
     }

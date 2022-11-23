@@ -54,6 +54,6 @@ div.error {
   border: 3px solid red;
   color: red;
 }
-div.error:empty{
+div.error:empty {
   display: none;
 }

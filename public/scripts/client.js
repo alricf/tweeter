@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function() {
-  // Helper Functions
+  ////////////////////////////// Helper Functions //////////////////////////////
 
   // Validation function for tweet input
   const validation = function(text) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     return { message: "", notSuccess: false, };
   };
 
-  // Function to protect against cross-site scripting 
+  // Function to protect against cross-site scripting
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -83,7 +83,7 @@ $(document).ready(function() {
         $(this).html(`&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;Error: ${validate.message}&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>`);
       });
       return;
-    };
+    }
 
     const formData = $(this).serialize();
 

@@ -37,6 +37,7 @@ $(document).ready(function() {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
+    $('section.tweets-container').empty();
     tweets.map(tweet => {
       const t = createTweetElement(tweet);
       $('section.tweets-container').prepend(t);

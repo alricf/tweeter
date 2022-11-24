@@ -96,6 +96,11 @@ $(document).ready(function() {
       $("textarea#tweet-text").val("");
       $(".counter").val(140);
       loadTweets();
+    }).fail(function(error) {
+      $("div.error").slideDown("slow", function() {
+        $(this).html(`&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;Error: ${error.status} ${error.statusText}&nbsp;&nbsp;<i class="fa-solid fa-triangle-exclamation"></i>`);
+      });
+      return;
     });
   });
 
